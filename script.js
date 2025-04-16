@@ -19,9 +19,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const timelineItem = document.createElement('div');
         timelineItem.className = 'timeline-item';
         timelineItem.innerHTML = `
-            <h3>${item.title}</h3>
-            <p><strong>${item.company}</strong> - ${item.period}</p>
-            <p>${item.description}</p>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">${item.title}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">${item.company} - ${item.period}</h6>
+                    <p class="card-text">${item.description}</p>
+                </div>
+            </div>
         `;
         timelineContainer.appendChild(timelineItem);
     });
@@ -29,20 +33,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const skillsContainer = document.getElementById('skills-container');
     skillsData.forEach(skill => {
         const skillElement = document.createElement('div');
-        skillElement.className = 'skill';
-        skillElement.textContent = skill;
+        skillElement.className = 'col-md-3 mb-3';
+        skillElement.innerHTML = `
+            <div class="card">
+                <div class="card-body text-center">
+                    <p class="card-text">${skill}</p>
+                </div>
+            </div>
+        `;
         skillsContainer.appendChild(skillElement);
     });
 
     const publicationsContainer = document.getElementById('publications-container');
     publicationsData.forEach(publication => {
         const publicationElement = document.createElement('div');
-        publicationElement.className = 'publication';
+        publicationElement.className = 'col-md-4 mb-3';
         publicationElement.innerHTML = `
-            <img src="${publication.image}" alt="${publication.title}">
-            <h3>${publication.title}</h3>
-            <p><strong>${publication.authors}</strong> - ${publication.journal}, ${publication.year}</p>
-            <a href="${publication.link}" target="_blank">Read Publication</a>
+            <div class="card">
+                <img src="${publication.image}" class="card-img-top" alt="${publication.title}">
+                <div class="card-body">
+                    <h5 class="card-title">${publication.title}</h5>
+                    <p class="card-text"><strong>${publication.authors}</strong> - ${publication.journal}, ${publication.year}</p>
+                    <a href="${publication.link}" target="_blank" class="btn btn-primary">Read Publication</a>
+                </div>
+            </div>
         `;
         publicationsContainer.appendChild(publicationElement);
     });

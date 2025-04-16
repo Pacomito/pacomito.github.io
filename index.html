@@ -4,33 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pacôme Prompsy</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header class="bg-dark text-white text-center py-3">
         <h1>Pacôme Prompsy</h1>
     </header>
-    <main>
+    <main class="container my-4">
         <section id="about">
             <h2>About Me</h2>
             <p>Creative thinking - Team player - Result oriented - Rigorous mindset</p>
         </section>
         <section id="experience">
             <h2>Experience</h2>
-            <div id="timeline"></div>
+            <div id="timeline" class="timeline"></div>
         </section>
         <section id="skills">
             <h2>Skills</h2>
-            <div id="skills-container"></div>
+            <div id="skills-container" class="row"></div>
         </section>
         <section id="publications">
             <h2>Publications</h2>
-            <div id="publications-container"></div>
+            <div id="publications-container" class="row"></div>
         </section>
     </main>
-    <footer>
+    <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2024 Pacôme Prompsy</p>
     </footer>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
