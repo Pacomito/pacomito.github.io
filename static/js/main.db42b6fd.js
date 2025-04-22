@@ -314,8 +314,8 @@
 {position:"right",title:"Research Scientist",company:"Lausanne University Hospital",date:"Jan 2023 - Mar 2025",description:"Analyzing spatial proteomics data of Cutaneous T-cell Lymphoma (CTCL) patients.",icon:"\ud83d\udcbb"},
 {position:"left",title:"Research Engineer",company:"Institut Curie",date:"December 2019 - Jan 2023",description:"Developed computational methods for single-cell epigenomics technologies.",icon:"\ud83d\udcbb"},
 {position:"right",title:"Research Assistant",company:"Hudson Institute, Melbourne",date:"Jan 2019 - May 2019",description:"Predicting micro RNAs targets using Transcrition Factor binding sites.",icon:"\ud83d\udc53"},
-{position:"left",title:"MSc in Applied bioinformatics",company:"Cranfield University",date:"Sep 2018 - Aug 2019",description:"Master.",icon:"\ud83d\udcd4"},
-{position:"right",title:"MSc Biological engineering",company:"Compiegne University of Technology",date:"Sep 2013 - Aug 2018",description:"Master.",icon:"\ud83d\udcd4"}
+{position:"left",title:"MSc in Applied bioinformatics",company:"Cranfield University",date:"Sep 2018 - Aug 2019",description:"",icon:"\ud83d\udcd4"},
+{position:"right",title:"MSc Biological engineering",company:"Compiegne University of Technology",date:"Sep 2013 - Aug 2018",description:"",icon:"\ud83d\udcd4"}
 ].map(((e,t)=>(0,fn.jsx)(Pc,{position:e.position,initial:{opacity:0,x:"left"===e.position?-30:30},whileInView:{opacity:1,x:0},transition:{duration:.5,delay:.1*t},viewport:{once:!0},children:(0,fn.jsxs)(Cc,{children:[(0,fn.jsxs)("h3",{children:[e.icon," ",e.title]}),(0,fn.jsxs)("div",{className:"date",children:[e.company," | ",e.date]}),(0,fn.jsx)("p",{children:e.description})]})},t)))})]})},Ac=Kt.section`
   padding: 4rem 2rem;
   background-color: ${e=>e.theme.colors.light};
@@ -356,7 +356,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
 `;const Oc=function(){return(0,fn.jsxs)(Ac,{id:"skills",children:[(0,fn.jsx)(_c,{children:"Skills"}),(0,fn.jsx)(Dc,{
-  children:["scRNA-seq","sc-Epigenomics","Cancer Biology","Dermatology","Bulk Epigenomics","Genomics","R programming","Python","GitHub","Nextflow","Docker","Bash scripting","HPC cluster computing", "Bioconductor package development"].map(((e,t)=>(0,fn.jsx)(Rc,{initial:{opacity:0,scale:.8},whileInView:{opacity:1,scale:1},transition:{duration:.3,delay:.05*t},viewport:{once:!0},children:e},t)))})]})},Lc=Kt.section`
+  children:["Single-cell","scRNA-seq","scEpigenomics","Cancer Biology","Dermatology","Bulk Epigenomics","Genomics","R programming","Python","GitHub","Nextflow","Docker","Bash scripting","HPC cluster computing", "Bioconductor package development"].map(((e,t)=>(0,fn.jsx)(Rc,{initial:{opacity:0,scale:.8},whileInView:{opacity:1,scale:1},transition:{duration:.3,delay:.05*t},viewport:{once:!0},children:e},t)))})]})},Lc=Kt.section`
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
