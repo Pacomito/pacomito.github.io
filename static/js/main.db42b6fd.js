@@ -366,16 +366,19 @@
   position: relative;
   display: inline-block;
   
+  `;const Oc=function(){return(0,fn.jsxs)(Ac,{id:"skills2",children:[(0,fn.jsx)(_c,{children:"Skills2"}),(0,fn.jsx)(Dc,{
+  children:["Single-cell","scRNA-seq","scEpigenomics","Cancer Biology","Dermatology","Bulk Epigenomics","Genomics","R programming","Python","GitHub","Nextflow","Docker","Bash scripting","HPC cluster computing", "Bioconductor package development"].map(((e,t)=>(0,fn.jsx)(Rc,{initial:{opacity:0,scale:.8},whileInView:{opacity:1,scale:1},transition:{duration:.3,delay:.05*t},viewport:{once:!0},children:e},t)))})]})},Lc=Kt.section`
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+`,Nc=Kt.h2`
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  
+  
   &:after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    background-color: ${e=>e.theme.colors.primary};
-  }
-   &:after {
     content: '';
     position: absolute;
     bottom: -10px;
