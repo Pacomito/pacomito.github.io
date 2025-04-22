@@ -375,6 +375,15 @@
     height: 3px;
     background-color: ${e=>e.theme.colors.primary};
   }
+   &:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: ${e=>e.theme.colors.primary};
+  }
 `,Mc=Kt.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
