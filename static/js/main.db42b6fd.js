@@ -493,24 +493,15 @@
   },
   {
     id: 2,
-    title: "Th17-associated cytokines IL-17 and IL-23 in inflamed skin of Darier disease patients as potential therapeutic targets",
-    journal: "Nature Communications",
-    year: 2023,
-    authors: "Ettinger M, Burner T, Sharma A, Chang Y, Lackner A, Prompsy P, ..., Guenova E, Hoetzenecker W",
-    imageUrl: "/images/darier-cytokines.jpg",
-    link: "https://doi.org/10.1038/s41467-023-43210-5"
-  },
-  {
-    id: 3,
     title: "IDclust: Iterative clustering for unsupervised identification of cell types with single cell transcriptomics and epigenomics",
     journal: "Nucleic Acid Research Genomics and Bioinformatics",
     year: 2024,
     authors: "Prompsy P, Saichi M, Raimundo F, Vallot C",
     imageUrl: "/images/idclust.jpg",
-    link: "https://github.com/vallotlab/IDclust"
+    link: "https://doi.org/10.1093/nargab/lqae174"
   },
   {
-    id: 4,
+    id: 3,
     title: "Best practices for single-cell histone post translational modification analysis",
     journal: "Genome Biology",
     year: 2022,
@@ -519,7 +510,7 @@
     link: "https://doi.org/10.1186/s13059-023-02981-2"
   },
   {
-    id: 5,
+    id: 4,
     title: "H3K27me3 conditions chemotolerance in triple-negative breast cancer",
     journal: "Nature Genetics",
     year: 2022,
@@ -528,7 +519,7 @@
     link: "https://doi.org/10.1038/s41588-022-01047-6"
   },
   {
-    id: 6,
+    id: 5,
     title: "Interactive analysis of single-cell epigenomic landscapes with ChromSCape",
     journal: "Nature Communications",
     year: 2020,
@@ -537,7 +528,7 @@
     link: "https://doi.org/10.1038/s41467-020-19542-x"
   },
   {
-    id: 7,
+    id: 6,
     title: "Making use of transcription factor enrichment to identify functional microRNA-regulons",
     journal: "Computational and Structural Biotechnology Journal",
     year: 2021,
@@ -548,7 +539,7 @@
 
   // In process
   {
-    id: 8,
+    id: 7,
     title: "Subcellular cell interactions reveal immune evasion in cutaneous T-cell lymphoma",
     journal: "Submitted to Cancer Discovery",
     year: 2025,
@@ -557,21 +548,12 @@
     link: "" // add link once available
   },
   {
-    id: 9,
+    id: 8,
     title: "AP-1 drives a hallmark persister state in triple-negative breast cancer",
     journal: "Submitted to Cell Press Multi-Journal Submission",
     year: 2025,
     authors: "Baudre L., Jouault G., Prompsy P., ..., Vallot C.",
     imageUrl: "/images/ap1-persister.jpg",
-    link: "" // add link once available
-  },
-  {
-    id: 10,
-    title: "Luminal progenitors undergo partial epithelial-to-mesenchymal transition at the onset of basal-like breast tumorigenesis",
-    journal: "Submitted to Nature Genetics",
-    year: 2024,
-    authors: "Laisne M., Landragin C., Saichi M., Prompsy P., ..., Salmon H., Vallot C.",
-    imageUrl: "/images/luminal-emt.jpg",
     link: "" // add link once available
   }
 ]].sort(((e,n)=>"desc"===t?n.year-e.year:e.year-n.year));return(0,fn.jsxs)(Lc,{id:"publications",children:[(0,fn.jsx)(Nc,{children:"Selected Publications"}),(0,fn.jsxs)(Wc,{children:[(0,fn.jsx)("span",{children:"Sort by: "}),(0,fn.jsx)(Kc,{active:"desc"===t,onClick:()=>n("desc"),children:"Newest First"}),(0,fn.jsx)(Kc,{active:"asc"===t,onClick:()=>n("asc"),children:"Oldest First"})]}),(0,fn.jsx)(Mc,{children:r.map((e=>(0,fn.jsxs)(zc,{children:[(0,fn.jsx)(jc,{href:e.link,target:"_blank",rel:"noopener noreferrer","aria-label":`View publication: ${e.title}`,children:(0,fn.jsx)(Fc,{imageUrl:e.imageUrl})}),(0,fn.jsxs)(Vc,{children:[(0,fn.jsx)($c,{children:e.year}),(0,fn.jsx)(Ic,{children:e.title}),(0,fn.jsx)(Bc,{children:e.journal}),(0,fn.jsx)(Uc,{children:e.authors}),(0,fn.jsx)(Hc,{href:e.link,target:"_blank",rel:"noopener noreferrer",children:"Read Publication \u2192"})]})]},e.id)))})]})};const Gc=function(){return(0,fn.jsxs)(Ft,{theme:Yt,children:[(0,fn.jsx)(Gt,{}),(0,fn.jsx)(wn,{}),(0,fn.jsxs)("main",{children:[(0,fn.jsx)(gc,{}),(0,fn.jsx)(wc,{}),(0,fn.jsx)(Tc,{}),(0,fn.jsx)(Oc,{}),(0,fn.jsx)(qc,{})]}),(0,fn.jsx)(Cn,{})]})},Yc=e=>{e&&e instanceof Function&&n.e(453).then(n.bind(n,453)).then((t=>{let{getCLS:n,getFID:r,getFCP:i,getLCP:o,getTTFB:a}=t;n(e),r(e),i(e),o(e),a(e)}))};t.createRoot(document.getElementById("root")).render((0,fn.jsx)(e.StrictMode,{children:(0,fn.jsx)(Gc,{})})),Yc()})()})();
