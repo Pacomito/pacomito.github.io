@@ -311,11 +311,11 @@
   }
 `;const Tc=function(){return(0,fn.jsxs)(xc,{id:"experience",children:[(0,fn.jsx)(kc,{children:"Experience"}),(0,fn.jsx)(Ec,{children:[
 {position:"left",title:"PhD. Candidate",company:"Lausanne University Hospital",date:"Mar 2025 - Present", description:"Spatial multi-omics and TCR sequencing to tackle CTCL.",icon:"\ud83d\udd2c"},
-{position:"right",title:"Research Scientist",company:"Lausanne University Hospital",date:"Jan 2023 - Mar 2025",description:"Analyzing spatial proteomics data of Cutaneous T-cell Lymphoma (CTCL) patients.",icon:"\ud83d\udd2c"},
+{position:"right",title:"Research Scientist",company:"Lausanne University Hospital",date:"Jan 2023 - Mar 2025",description:"Analyzing spatial proteomics data of Cutaneous T-cell Lymphoma (CTCL) patients.",icon:"\ud83d\udcbb"},
 {position:"left",title:"Research Engineer",company:"Institut Curie",date:"December 2019 - Jan 2023",description:"Developed computational methods for single-cell epigenomics technologies.",icon:"\ud83d\udcbb"},
-{position:"right",title:"Research Assistant",company:"Hudson Institute, Melbourne",date:"Jan 2019 - May 2019",description:"Predicting micro RNAs targets using Transcrition Factor binding sites.",icon:"\ud83d\udd2c"},
-{position:"left",title:"MSc in Applied bioinformatics",company:"Cranfield University",date:"Sep 2018 - Aug 2019",description:"",icon:"\ud83d\udd2c"},
-{position:"right",title:"MSc Biological engineering",company:"Compiegne University of Technology",date:"Sep 2013 - Aug 2018",description:"",icon:"\ud83d\udd2c"}
+{position:"right",title:"Research Assistant",company:"Hudson Institute, Melbourne",date:"Jan 2019 - May 2019",description:"Predicting micro RNAs targets using Transcrition Factor binding sites.",icon:"\ud83d\udc53"},
+{position:"left",title:"MSc in Applied bioinformatics",company:"Cranfield University",date:"Sep 2018 - Aug 2019",description:"Master.",icon:"\ud83d\udcd4"},
+{position:"right",title:"MSc Biological engineering",company:"Compiegne University of Technology",date:"Sep 2013 - Aug 2018",description:"Master.",icon:"\ud83d\udcd4"}
 ].map(((e,t)=>(0,fn.jsx)(Pc,{position:e.position,initial:{opacity:0,x:"left"===e.position?-30:30},whileInView:{opacity:1,x:0},transition:{duration:.5,delay:.1*t},viewport:{once:!0},children:(0,fn.jsxs)(Cc,{children:[(0,fn.jsxs)("h3",{children:[e.icon," ",e.title]}),(0,fn.jsxs)("div",{className:"date",children:[e.company," | ",e.date]}),(0,fn.jsx)("p",{children:e.description})]})},t)))})]})},Ac=Kt.section`
   padding: 4rem 2rem;
   background-color: ${e=>e.theme.colors.light};
