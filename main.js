@@ -1,3 +1,27 @@
+// ====== Colors ======
+const root = document.documentElement;
+root.style.setProperty('--primary', '#C99DA3');
+root.style.setProperty('--secondary', '#9C0D38');
+root.style.setProperty('--background', '#f8fafc');
+root.style.setProperty('--text', '#1e293b');
+root.style.setProperty('--light', '#FFFFFF');
+root.style.setProperty('--dark', '#2C4251');
+root.style.setProperty('--accent', '#996888');
+root.style.setProperty('--font-main', "'Inter', sans-serif");
+
+document.body.style.fontFamily = "var(--font-main)";
+document.body.style.backgroundColor = "var(--background)";
+document.body.style.color = "var(--text)";
+
+  const applyBoxStyle = (element) => {
+    element.style.backgroundColor = "var(--light)";
+    element.style.color = "var(--dark)";
+    element.style.padding = "1rem";
+    element.style.borderRadius = "8px";
+    // element.style.boxShadow = "var(--box-shadow)";
+  };
+  
+
 // ====== Experience Timeline ======
 const experienceData = [
     { title:"PhD. Candidate", company:"Lausanne University Hospital", date:"2025 - Present", description:"Spatial multi-omics and TCR sequencing to tackle CTCL.", icon:"🔬" },
@@ -14,15 +38,23 @@ experienceData.forEach((exp, index) => {
   const item = document.createElement('div');
   item.className = `timeline-item ${side}`;
 
-  item.innerHTML = `
-    <div class="content">
-      <h5>${exp.icon} ${exp.title}</h5>
-      <p><em>${exp.company} | ${exp.date}</em></p>
+  const content = document.createElement('div');
+    content.className = 'content';
+    content.innerHTML = `
+      <h5 style="color: var(--secondary); font-weight: 600;">${exp.icon} ${exp.title}</h5>
+      <p><em style="color: var(--accent);">${exp.company} | ${exp.date}</em></p>
       <p>${exp.description}</p>
-    </div>
-  `;
+    `;
 
-  timeline.appendChild(item);
+    if(side == "left"){
+      content.style.borderLeft = "5px solid var(--accent)";
+    } else {
+      content.style.borderRight = "5px solid var(--accent)";
+    };
+    
+    applyBoxStyle(content);
+    item.appendChild(content);
+    timeline.appendChild(item);
 });
 
 // ====== Skills ======
@@ -36,6 +68,7 @@ skills.forEach(skill => {
   const box = document.createElement('div');
   box.className = 'skills-box';
   box.textContent = skill;
+  applyBoxStyle(box);
   skillsContainer.appendChild(box);
 });
 
@@ -54,6 +87,7 @@ resources.forEach(resource => {
       <h5><a href="${resource.link}" target="_blank" class="text-white">${resource.title}</a></h5>
     </div>
   `;
+  applyBoxStyle(card);
   resourcesContainer.appendChild(card);
 });
 
@@ -124,18 +158,23 @@ const publications = [
     link: ""
   }
 ];
+
+
 const publicationsContainer = document.getElementById('publications-container');
 publications.forEach(pub => {
-  const card = document.createElement('div');
-  card.className = 'col-md-6';
-  card.innerHTML = `
-    <div class="pub-card">
-      <img src="${pub.imageUrl}" alt="${pub.title}" />
+    const card = document.createElement('div');
+    card.className = 'col-md-6';
+    const pubCard = document.createElement('div');
+    pubCard.className = 'pub-card';
+
+    pubCard.innerHTML = `
+      <img src="${pub.imageUrl}" alt="${pub.title}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;" />
       <h5 class="mt-3">${pub.title}</h5>
       <p><strong>${pub.journal}</strong>, ${pub.year}</p>
       <p><em>${pub.authors}</em></p>
       ${pub.link ? `<a href="${pub.link}" target="_blank" class="btn btn-light btn-sm">View Publication</a>` : ''}
-    </div>
-  `;
-  publicationsContainer.appendChild(card);
-});
+    `;
+    applyBoxStyle(pubCard);
+    card.appendChild(pubCard);
+    publicationsContainer.appendChild(card);
+  });
