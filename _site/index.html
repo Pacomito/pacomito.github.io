@@ -1,21 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🫧</text></svg>" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#5D4AF0" />
-    <meta name="description" content="Computational biologist in spatial biology the Guenova Lab at CHUV | JKU Linz" />
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🫧</text></svg>" />
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet" />
-    <link rel="manifest" href="/manifest.json" />
-    <title>Pacôme Prompsy | Bioinformatics, Epigenomics and Spatial Biology</title>
-    <script defer="defer" src="/static/js/main.db42b6fd.js"></script>
-    <link href="/static/css/main.e6c13ad2.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pacôme Prompsy</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: url('images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+    }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      background: #fff;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -1px;
+    }
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 1rem;
+    }
+    .timeline-item.left {
+      left: 0;
+      text-align: right;
+    }
+    .timeline-item.right {
+      left: 50%;
+      text-align: left;
+    }
+    .timeline-item .content {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1rem;
+      border-radius: 8px;
+      position: relative;
+    }
+    .timeline-item.left .content::after {
+      content: "";
+      position: absolute;
+      top: 1rem;
+      right: -8px;
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 8px solid rgba(0, 0, 0, 0.5);
+    }
+    .timeline-item.right .content::after {
+      content: "";
+      position: absolute;
+      top: 1rem;
+      left: -8px;
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 8px solid rgba(0, 0, 0, 0.5);
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 1rem;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border-radius: 50%;
+      border: 4px solid #e43;
+      z-index: 1;
+    }
+    .timeline-item.left::before {
+      right: -10px;
+    }
+    .timeline-item.right::before {
+      left: -10px;
+    }
+    .skills-box {
+      background-color: rgba(255,255,255,0.1);
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      margin: 0.25rem;
+      display: inline-block;
+    }
+    .resource-card, .pub-card {
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 1rem;
+      padding: 1rem;
+      color: white;
+    }
+    .pub-card img {
+      max-width: 100%;
+      border-radius: 1rem;
+    }
+  </style>
 </head>
 <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root">
-    </div>
+  <div class="container py-5">
+    <h1 class="display-3 fw-bold text-center mb-5">Pacôme Prompsy</h1>
+
+    <section id="about" class="mb-5">
+      <h2>About Me</h2>
+      <p class="lead">I am a computational biologist specializing in single-cell genomics and cancer research, with a strong focus on CTCL and spatial omics data analysis.</p>
+    </section>
+
+    <section id="experience" class="mb-5">
+      <h2>Experience</h2>
+      <div id="timeline" class="timeline position-relative"></div>
+    </section>
+
+    <section id="skills" class="mb-5">
+      <h2>Skills</h2>
+      <div class="d-flex flex-wrap" id="skills-container"></div>
+    </section>
+
+    <section id="resources" class="mb-5">
+      <h2>Online Resources</h2>
+      <div class="row" id="resources-container"></div>
+    </section>
+
+    <section id="publications" class="mb-5">
+      <h2>Selected Publications</h2>
+      <div class="row" id="publications-container"></div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
